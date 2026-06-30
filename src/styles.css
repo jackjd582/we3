@@ -1,0 +1,229 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Global Responsive Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding-top: 65px;
+    }
+}
+
+/* Responsive Typography */
+
+@media (max-width: 992px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    h6 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    h5 {
+        font-size: 14px;
+    }
+
+    h6 {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+
+    h5 {
+        font-size: 13px;
+    }
+
+    h6 {
+        font-size: 11px;
+    }
+}
+
+/* Responsive Container */
+
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Responsive Images */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Buttons */
+
+button, .btn {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:active, .btn:active {
+    transform: scale(0.98);
+}
+
+/* Responsive Forms */
+
+input, textarea, select {
+    max-width: 100%;
+}
+
+/* Responsive Tables */
+
+@media (max-width: 768px) {
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+/* Responsive Padding & Margins */
+
+@media (max-width: 768px) {
+    .p-lg {
+        padding: 30px 0 !important;
+    }
+
+    .m-lg {
+        margin: 30px 0 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .p-lg {
+        padding: 20px 0 !important;
+    }
+
+    .m-lg {
+        margin: 20px 0 !important;
+    }
+}
+
+/* Accessibility - Reduce motion for users who prefer it */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

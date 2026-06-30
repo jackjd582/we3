@@ -1,0 +1,214 @@
+[
+    {
+        "id": 1,
+        "title": "Car Interior Dresser",
+        "category": "Car Interior Dresser",
+        "price": "₹499",
+        "description": "Professional-grade car shampoo that effectively removes dirt and contaminants while protecting the paint.",
+        "rating": 4.8,
+        "reviews": 421,
+         "images": [
+            "assets/images/products/Car-Interior-dresser.jpeg",
+            "assets/images/products/Car-Interior-use.jpeg",
+            "assets/images/products/Car-Interior-degreaser-usage.jpeg"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "All in one Dresser",
+        "category": "All In One Dresser",
+        "price": "₹799",
+        "description": "High-quality wax polish for a glossy shine and long-lasting protection against UV rays.",
+        "rating": 4.9,
+        "reviews": 312,
+         "images": [
+            "assets/images/products/all-in-one-dresser.jpeg",
+            "assets/images/products/All-in-one-use.jpeg",
+            "assets/images/products/all-in-degreaser-usage.jpeg"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Degreaser For Engine,Bonnet & Alloy wheels",
+        "category": "Degreaser",
+        "price": "₹349",
+        "description": "Powerful interior cleaner for dashboard, seats, and upholstery without leaving residue.",
+        "rating": 4.7,
+        "reviews": 285,
+         "images": [
+            "assets/images/products/degreaser.jpeg",
+            "assets/images/products/degreaser-usage.jpeg",
+            "assets/images/products/degreaser-back-usage.jpeg"
+        ]
+    },
+    {
+        "id": 4,
+       "title": "Engine Degreaser",
+        "category": "Engine Dresser",
+        "price": "₹599",
+        "description": "Heavy-duty engine degreaser for deep cleaning of engine components.",
+        "rating": 4.7,
+        "reviews": 267,
+        "images": [
+            "assets/images/products/engine-degreaser.jpeg",
+            "assets/images/products/engine-degreaser-usage.jpeg"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Foam Wash Shampoo",
+        "category": "Foam Wash Shampoo",
+        "price": "₹299",
+        "description": "Streak-free glass cleaner for windows, mirrors, and glass surfaces.",
+        "rating": 4.6,
+        "reviews": 198,
+        "images": [
+            "assets/images/products/foam-wash.jpeg",
+            "assets/images/products/foam-wash-usage.jpeg",
+            "assets/images/products/foam-wash-back-usage.jpeg"
+        ]
+
+    },
+    {
+        "id": 6,
+        "title": "Hard Spot Remover",
+        "category": "Hard Spot Remover",
+        "price": "₹399",
+        "description": "Effective hard spot remover for tough stains and water marks.",
+        "rating": 4.7,
+        "reviews": 210,
+        "images": [
+            "assets/images/products/hard-spot-remover.jpeg",
+            "assets/images/products/hard-spot-remover-usage.jpeg"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Car Interior  Upholstery Cleaner",
+        "category": "Car Interior Dresser",
+        "price": "₹599",
+        "description": "Advanced formula car wash with nano technology for superior shine.",
+        "rating": 4.8,
+        "reviews": 356,
+       "images": [
+            "assets/images/products/car-interior-upholstery-cleaner.jpeg",
+            "assets/images/products/car-interior-upholstery-cleaner-usage.jpeg",
+            "assets/images/products/car-interior-upholstery-cleaner-back-usage.jpeg"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Tyre Dresser Gel",
+        "category": "Tyre Dresser",
+        "price": "₹899",
+        "description": "Premium protective wax with advanced UV protection formula.",
+        "rating": 4.9,
+        "reviews": 445,
+        "images": [
+            "assets/images/products/tyre-dresser-gel.jpeg",
+            "assets/images/products/tyre-dresser-gel-usage.jpeg",
+            "assets/images/products/tyre-dresser-gel-back-usage.jpeg"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Tyre Dresser Liquid",
+        "category": "Tyre Dresser",
+        "price": "₹549",
+        "description": "Luxurious foam car wash that creates thick, protective lather for deep cleaning.",
+        "rating": 4.7,
+        "reviews": 189,
+        "images": [
+            "assets/images/products/tyre-dresser-liquid.jpeg",
+            "assets/images/products/tyre-dresser-liquid-usage.jpeg",
+            "assets/images/products/tyre-dresser-liquid-back-usage.jpeg"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Anti Rust Underbody Coating",
+        "category": "Anti Rust Underbody Coating",
+        "price": "₹1299",
+        "description": "Advanced ceramic wax coating that provides 6-month protection and hydrophobic properties.",
+        "rating": 4.9,
+        "reviews": 534,
+        "images": [
+            "assets/images/products/anti-rust-underbody-coating.jpeg",
+            "assets/images/products/anti-rust-underbody-coating-usage.jpeg"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Wash & Wax Shampoo",
+        "category": "Wash & Wax Shampoo",
+        "price": "₹1299",
+        "description": "Advanced ceramic wax coating that provides 6-month protection and hydrophobic properties.",
+        "rating": 4.9,
+        "reviews": 534,
+        "images": [
+            "assets/images/products/wash-wax-shampoo.jpeg",
+            "assets/images/products/wash-wax-shampoo-usage.jpeg"
+        ]
+    },
+     {
+        "id": 12,
+        "title": "Waterless Wash & Shine sampoo",
+        "category": "Wash & Wax Shampoo",
+        "price": "₹1299",
+        "description": "Advanced ceramic wax coating that provides 6-month protection and hydrophobic properties.",
+        "rating": 4.9,
+        "reviews": 534,
+        "images": [
+            "assets/images/products/waterless-wash-shine-shampoo.jpeg"
+        ]
+    },
+     {
+        "id": 13,
+        "title": "Windshield Glass Cleaner",
+        "category": "Glass Cleaner",
+        "price": "₹1299",
+        "description": "Advanced ceramic wax coating that provides 6-month protection and hydrophobic properties.",
+        "rating": 4.9,
+        "reviews": 534,
+        "images": [
+            "assets/images/products/windshield-glass-cleaner.jpeg",
+            "assets/images/products/windshield-glass-cleaner-usage.jpeg"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Premium Microfiber Cloth",
+        "category": "Premium Microfiber Cloth",
+        "price": "₹1299",
+        "description": "Advanced ceramic wax coating that provides 6-month protection and hydrophobic properties.",
+        "rating": 4.9,
+        "reviews": 534,
+        "images": [
+            "assets/images/products/premium-microfiber-cloth.png"
+        ]
+    },
+     {
+        "id": 15,
+        "title": "Fiber Plastic Restorer",
+        "category": "Fiber Plastic Restorer",
+        "price": "₹1299",
+        "description": "Advanced ceramic wax coating that provides 6-month protection and hydrophobic properties.",
+        "rating": 4.9,
+        "reviews": 534,
+        "images": [
+            "assets/images/products/fiber-plastic-restorer.png"
+        ]
+    },
+      {
+        "id": 16,
+        "title": "Essential Oil & Fragrance",
+        "category": "Essential Oil & Fragrance",
+        "price": "₹1299",
+        "description": "Advanced ceramic wax coating that provides 6-month protection and hydrophobic properties.",
+        "rating": 4.9,
+        "reviews": 534,
+        "images": [
+            "assets/images/products/essential-oil-fragrance.png"
+        ]
+    }
+]

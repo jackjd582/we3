@@ -1,0 +1,211 @@
+<div class="products-page">
+
+  <!-- SEARCH -->
+
+  <div class="search-wrapper">
+
+    <input type="text" [(ngModel)]="searchQuery" (keyup)="onSearch()" placeholder="Search products..."
+      class="search-input">
+
+  </div>
+
+  <div class="layout">
+
+    <!-- LEFT CATEGORY -->
+
+    <!-- LEFT CATEGORY -->
+
+    <aside class="sidebar">
+
+      <h3 class="desktop-title">
+        Categories
+      </h3>
+
+      <!-- MOBILE FILTER -->
+
+      <select class="mobile-filter" [(ngModel)]="selectedCategory" (change)="selectCategory(selectedCategory)">
+
+        <option *ngFor="
+let category
+of categories" [value]="
+category.title">
+
+          {{category.title}}
+
+        </option>
+
+      </select>
+
+      <!-- DESKTOP -->
+
+      <div class="desktop-category">
+
+        <div class="category" *ngFor="
+let category
+of categories" [class.active]="
+selectedCategory
+===
+category.title" (click)="
+selectCategory(
+category.title
+)">
+
+          <img *ngIf="
+category.image" [src]="
+getImageUrl(
+category.image
+)">
+
+          <span>
+
+            {{category.title}}
+
+          </span>
+
+        </div>
+
+      </div>
+
+    </aside>
+    <!-- RIGHT PRODUCTS -->
+
+    <section class="products">
+
+      <div class="header">
+
+        <h2>
+
+          {{
+          selectedCategory
+          }}
+
+        </h2>
+
+        <span>
+
+          {{filteredProducts.length}}
+          products
+
+        </span>
+
+      </div>
+
+      <div class="empty" *ngIf="
+                getPaginatedProducts()
+                .length===0">
+
+        No products found
+
+      </div>
+
+      <div class="grid" *ngIf="
+                getPaginatedProducts()
+                .length">
+
+        <div class="card" *ngFor="
+                    let product
+                    of getPaginatedProducts()" [routerLink]="[
+                    '/product-detail',
+                    product.id
+                    ]">
+
+      <div class="img-box">
+
+  <img
+    [src]="getImageUrl(
+      product.images?.[0] || product.image
+    )">
+
+</div>
+
+          <div class="body">
+
+            <h4>
+
+              {{product.title}}
+
+            </h4>
+
+            <p>
+
+              {{product.category}}
+
+            </p>
+
+            <div class="rating">
+
+              ⭐
+              {{product.rating}}
+
+            </div>
+
+            <div class="footer">
+
+              <h3>
+
+                {{product.price}}
+
+              </h3>
+
+              <button (click)="
+                                openWhatsApp(product);
+                                $event.stopPropagation()">
+
+                <i class="bi bi-whatsapp">
+
+                </i>
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      <!-- PAGINATION -->
+
+      <div class="pagination" *ngIf="
+totalPages > 1">
+
+        <button class="page-btn" (click)="
+goToPage(
+currentPage-1
+)" [disabled]="
+currentPage===1">
+
+          ← Prev
+
+        </button>
+
+        <div class="pages">
+
+          <button *ngFor="
+let page
+of getPageNumbers()" class="number" [class.active]="
+page===currentPage" (click)="
+goToPage(page)">
+
+            {{page}}
+
+          </button>
+
+        </div>
+
+        <button class="page-btn" (click)="
+goToPage(
+currentPage+1
+)" [disabled]="
+currentPage===totalPages">
+
+          Next →
+
+        </button>
+
+      </div>
+    </section>
+
+  </div>
+
+</div>

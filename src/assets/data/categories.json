@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "title": "Engine Dresser",
+    "image": "assets/images/categories/engine-dresser.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "Foam Wash Shampoo",
+    "image": "assets/images/categories/foam-wash-shampoo.jpeg"
+  },
+  {
+    "id": 3,
+    "title": "Tyre Dresser",
+    "image": "assets/images/categories/tyre-dresser.jpeg"
+  },
+  {
+    "id": 4,
+    "title": "Wash & Wax Shampoo",
+    "image": "assets/images/categories/wash-wax-shampoo.jpeg"
+  },
+  {
+    "id": 5,
+    "title": "All In One Dresser",
+    "image": "assets/images/categories/all-in-one-dresser.jpeg"
+  },
+  {
+    "id": 6,
+    "title": "Car Interior Dresser",
+    "image": "assets/images/categories/car-interior-dresser.jpeg"
+  },
+  {
+    "id": 7,
+    "title": "Glass Cleaner",
+    "image": "assets/images/categories/glass-cleaner.jpeg"
+  },
+  {
+    "id": 8,
+    "title": "Anti Rust Underbody Coating",
+    "image": "assets/images/categories/anti-rust-underbody-coating.png"
+  },
+  {
+    "id": 9,
+    "title": "Premium Microfiber Cloth",
+    "image": "assets/images/categories/premium-microfiber-cloth.png"
+  },
+  {
+    "id": 10,
+    "title": "Fiber Plastic Restorer",
+    "image": "assets/images/categories/fiber-plastic-restorer.png"
+  },
+  {
+    "id": 11,
+    "title": "Essential Oil & Fragrance",
+    "image": "assets/images/categories/essential-oil-fragrance.png"
+  },
+  {
+    "id": 12,
+    "title": "Degreaser",
+    "image": "assets/images/categories/degreaser.jpeg"
+  },
+  {
+    "id": 13,
+    "title": "Hard Spot Remover",
+    "image": "assets/images/categories/hard-spot-remover.jpeg"
+  }
+]

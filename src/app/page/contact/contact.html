@@ -1,0 +1,139 @@
+<section class="contact">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- LEFT -->
+
+            <div class="col-lg-6">
+
+                <div class="form-card">
+
+                    <h2>
+
+                        Contact Us
+
+                    </h2>
+
+                    <form [formGroup]="form" (ngSubmit)="submit()">
+
+                        <input class="form-control" placeholder="Your Name" formControlName="name">
+
+                        <input class="form-control" placeholder="Email" formControlName="email">
+
+                        <input class="form-control" placeholder="Phone" formControlName="phone">
+
+                        <textarea rows="5" class="form-control" placeholder="Message" formControlName="message">
+</textarea>
+
+                        <button type="submit">
+
+                            Send Message
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="col-lg-6">
+
+                <div class="map-card">
+
+                    <h2>
+
+                        Find Us
+
+                    </h2>
+
+                    <iframe src="https://maps.google.com/maps?q=Ahmedabad&t=&z=13&output=embed" loading="lazy"
+                        allowfullscreen>
+
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- BELOW CARDS -->
+
+        <div class="row g-4 mt-3">
+
+            <div class="col-md-4">
+
+                <div class="info-card">
+
+                    <div class="icon">
+
+                        <i class="bi bi-envelope"></i>
+
+                    </div>
+
+                    <h5>Email</h5>
+
+                    <p>
+
+                        hello@we3.com
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="info-card">
+
+                    <div class="icon">
+
+                        <i class="bi bi-telephone"></i>
+
+                    </div>
+
+                    <h5>Phone</h5>
+
+                    <p>
+
+                        +91 99999 99999
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="info-card">
+
+                    <div class="icon">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                    </div>
+
+                    <h5>Location</h5>
+
+                    <p>
+
+                        India
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

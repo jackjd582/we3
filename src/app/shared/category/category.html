@@ -1,0 +1,65 @@
+<section class="category">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>
+                Our Categories
+            </h2>
+
+        </div>
+
+        <div class="category-placeholder" *ngIf="loading">
+
+            Loading...
+
+        </div>
+
+        <div class="category-placeholder" *ngIf="!loading && errorMessage">
+
+            {{errorMessage}}
+
+        </div>
+
+        <div class="category-slider-wrapper" *ngIf="categories.length > 0">
+
+            <button class="slider-button prev" (click)="scrollSlider(-1)">
+
+                ‹
+
+            </button>
+
+            <div class="category-slider" #categorySlider>
+
+                <div class="category-card" *ngFor="
+let item
+of categories">
+
+                    <div class="card">
+
+                        <img [src]="item.image" [alt]="item.title">
+
+                        <h4>
+
+                            {{item.title}}
+
+                        </h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button class="slider-button next" (click)="scrollSlider(1)">
+
+                ›
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>

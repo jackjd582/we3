@@ -1,0 +1,75 @@
+<section class="seller">
+
+    <div class="container">
+        <div class="heading">
+            <h2>
+                Our Best Seller
+            </h2>
+        </div>
+
+        <div *ngIf="loading">
+
+            Loading products...
+
+        </div>
+
+        <div *ngIf="
+!loading &&
+errorMessage">
+
+            {{ errorMessage }}
+
+        </div>
+
+        <div class="row" *ngIf="
+!loading &&
+products.length">
+
+            <div class="col-lg-3" *ngFor="
+let item
+of products
+| slice:0:4">
+
+                <div class="product">
+
+                    <img [src]="item.image" [alt]="item.title">
+
+                    <h5>
+
+                        {{ item.title }}
+
+                    </h5>
+
+                    <div class="review">
+
+                        ★★★★★
+
+                        <span>
+
+                            ({{ item.reviews }})
+
+                        </span>
+
+                    </div>
+
+                    <div class="price">
+
+                        {{ item.price }}
+
+                    </div>
+
+                    <button class="wa-btn" (click)="contact(item.whatsapp)">
+
+                        WhatsApp
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

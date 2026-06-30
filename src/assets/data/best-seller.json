@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "Premium Car Shampoo",
+        "category": "Car Wash",
+        "price": "₹499",
+        "description": "Professional-grade car shampoo that effectively removes dirt and contaminants while protecting the paint.",
+        "rating": 4.8,
+        "reviews": 421,
+        "image": "assets/images/best-seller/car-shampoo.jpeg"
+    },
+    {
+        "id": 2,
+        "title": "All in one Dresser",
+        "category": "All In One Dresser",
+        "price": "₹799",
+        "description": "High-quality wax polish for a glossy shine and long-lasting protection against UV rays.",
+        "rating": 4.9,
+        "reviews": 312,
+        "image": "assets/images/best-seller/all-in-one-dresser.jpeg"
+    },
+    {
+        "id": 3,
+        "title": "Interior Cleaner",
+        "category": "Interior Cleaner",
+        "price": "₹349",
+        "description": "Powerful interior cleaner for dashboard, seats, and upholstery without leaving residue.",
+        "rating": 4.7,
+        "reviews": 285,
+        "image": "assets/images/best-seller/interior-cleaner.jpeg"
+    },
+    {
+        "id": 4,
+        "title": "Tyre Dresser",
+        "category": "Tyre Dresser",
+        "price": "₹399",
+        "description": "Premium tyre shine that provides a dark, glossy finish and protects against cracking.",
+        "rating": 4.8,
+        "reviews": 510,
+        "image": "assets/images/best-seller/tyre-dresser.jpeg"
+    }
+]
