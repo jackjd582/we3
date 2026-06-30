@@ -14,14 +14,14 @@ export class About {
     {
       name: 'John Carter',
       role: 'Founder',
-      image: 'assets/images/founder.jpg',
+      image: 'assets/images/founder.avif',
       desc:
         'Focused on delivering premium car care products with innovation and long-lasting quality.'
     },
     {
       name: 'Michael Roy',
       role: 'Co-Founder',
-      image: 'assets/images/co-founder.jpg',
+      image: 'assets/images/co-founder.avif',
       desc:
         'Passionate about customer experience and building trusted automotive care solutions.'
     }

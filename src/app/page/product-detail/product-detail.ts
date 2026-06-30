@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CONTACT } from '../../shared/config/contact.config';
 import { ProductService } from '../../services/product.service';
 
@@ -18,7 +18,8 @@ export class ProductDetail implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+      private router: Router
   ) { }
 
   ngOnInit() {
@@ -151,9 +152,13 @@ ${this.product.price}`;
     return stars;
   }
 
-  goBack() {
-    window.history.back();
-  }
+ goBack() {
+
+  this.router.navigate(
+    ['/products']
+  );
+
+}
 
   getImageUrl(path: string): string {
     if (!path) {

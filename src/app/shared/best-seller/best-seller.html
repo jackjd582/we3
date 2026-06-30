@@ -1,75 +1,68 @@
 <section class="seller">
 
-    <div class="container">
-        <div class="heading">
-            <h2>
-                Our Best Seller
-            </h2>
-        </div>
+  <div class="container">
 
-        <div *ngIf="loading">
+    <div class="heading">
+      <h2>Our Best Seller</h2>
+    </div>
 
-            Loading products...
+    <div *ngIf="loading">
+      Loading products...
+    </div>
 
-        </div>
+    <div *ngIf="!loading && errorMessage">
+      {{ errorMessage }}
+    </div>
 
-        <div *ngIf="
-!loading &&
-errorMessage">
+    <div class="row" *ngIf="!loading && products.length">
 
-            {{ errorMessage }}
+      <div
+        class="col-lg-3"
+        *ngFor="let item of products | slice:0:4"
+      >
 
-        </div>
+        <div class="product">
 
-        <div class="row" *ngIf="
-!loading &&
-products.length">
+          <img
+            [src]="item.image"
+            [alt]="item.title"
+          >
 
-            <div class="col-lg-3" *ngFor="
-let item
-of products
-| slice:0:4">
+          <h5>
+            {{ item.title }}
+          </h5>
 
-                <div class="product">
+          <div class="review">
+            ★★★★★
+            <span>
+              ({{ item.reviews }})
+            </span>
+          </div>
 
-                    <img [src]="item.image" [alt]="item.title">
+          <div class="price">
+            {{ item.price }}
+          </div>
 
-                    <h5>
+          <div class="contact-icons">
 
-                        {{ item.title }}
+            <i
+              class="bi bi-whatsapp"
+              (click)="openWhatsapp()"
+            ></i>
 
-                    </h5>
+            <i
+              class="bi bi-envelope-fill"
+              (click)="openEmail()"
+            ></i>
 
-                    <div class="review">
-
-                        ★★★★★
-
-                        <span>
-
-                            ({{ item.reviews }})
-
-                        </span>
-
-                    </div>
-
-                    <div class="price">
-
-                        {{ item.price }}
-
-                    </div>
-
-                    <button class="wa-btn" (click)="contact(item.whatsapp)">
-
-                        WhatsApp
-
-                    </button>
-
-                </div>
-
-            </div>
+          </div>
 
         </div>
+
+      </div>
 
     </div>
+
+  </div>
 
 </section>

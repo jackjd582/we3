@@ -1,7 +1,7 @@
-export const CONTACT={
+export const CONTACT = {
 
-whatsapp:'919999999999',
+  whatsapp: '916353799159',
 
-email:'sales@yourcompany.com'
+  email: 'Skygalaxyinfotech@gmail.com'
 
 };
