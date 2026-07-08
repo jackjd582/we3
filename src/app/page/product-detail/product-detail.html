@@ -130,7 +130,6 @@ selectImage(i)">
       <!-- Availability Info -->
       <div class="availability-info">
         <p><i class="bi bi-check-circle-fill"></i> In Stock - Ready to Ship</p>
-        <p><i class="bi bi-truck"></i> Free Shipping on orders above ₹500</p>
         <p><i class="bi bi-shield-check"></i> 100% Authentic & Genuine Product</p>
       </div>
     </div>
@@ -146,7 +145,10 @@ selectImage(i)">
         [routerLink]="['/product-detail', relatedProduct.id]"
       >
         <div class="related-product-image">
-          <img [src]="getImageUrl(relatedProduct.image)" [alt]="relatedProduct.title" />
+          <img
+    [src]="getImageUrl(
+      product.images?.[0] || product.image
+    )">
         </div>
         <div class="related-product-info">
           <h4 class="related-product-name">{{ relatedProduct.title }}</h4>

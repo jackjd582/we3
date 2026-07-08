@@ -1,4 +1,5 @@
 import {
+  ChangeDetectorRef,
   Component,
   ElementRef,
   ViewChild
@@ -28,7 +29,8 @@ export class Category {
 
   constructor(
     private service:
-      CategoryService
+      CategoryService,
+    private cdr: ChangeDetectorRef
   ) { }
 
   ngOnInit() {
@@ -45,6 +47,8 @@ export class Category {
 
           this.loading = false;
 
+          this.cdr.detectChanges();
+
         },
 
         error: (err) => {
@@ -55,6 +59,8 @@ export class Category {
 
           this.errorMessage =
             'Unable to load';
+
+          this.cdr.detectChanges();
 
         }
 

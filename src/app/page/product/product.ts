@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -25,7 +25,8 @@ export class Product implements OnInit {
 
   constructor(
     private productService: ProductService,
-    private categoryService: CategoryService
+    private categoryService: CategoryService,
+    private cdr: ChangeDetectorRef
   ) { }
 
   ngOnInit() {
@@ -37,9 +38,11 @@ export class Product implements OnInit {
     this.categoryService.getCategories().subscribe({
       next: (data) => {
         this.categories = [{ id: 0, title: 'All', image: '' }, ...data];
+        this.cdr.detectChanges();
       },
       error: (err) => {
         console.error('Failed to load categories:', err);
+        this.cdr.detectChanges();
       }
     });
   }
@@ -49,9 +52,11 @@ export class Product implements OnInit {
       next: (data) => {
         this.products = data;
         this.applyFilters();
+        this.cdr.detectChanges();
       },
       error: (err) => {
         console.error('Failed to load products:', err);
+        this.cdr.detectChanges();
       }
     });
   }

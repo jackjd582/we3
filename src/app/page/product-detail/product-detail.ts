@@ -125,6 +125,18 @@ ${this.product.price}`;
     return [this.product.image];
 
   }
+
+  getProductImage(product: any): string {
+    if (!product) {
+      return '';
+    }
+
+    if (product.images && product.images.length) {
+      return product.images[0];
+    }
+
+    return product.image;
+  }
   getSelectedImage(): string {
 
     const images =
@@ -164,6 +176,21 @@ ${this.product.price}`;
     if (!path) {
       return '';
     }
-    return path.startsWith('/') ? path : `/${path}`;
+
+    const normalizedPath = path.trim();
+
+    if (!normalizedPath) {
+      return '';
+    }
+
+    if (normalizedPath.startsWith('http://') || normalizedPath.startsWith('https://') || normalizedPath.startsWith('data:')) {
+      return normalizedPath;
+    }
+
+    if (normalizedPath.startsWith('/')) {
+      return normalizedPath;
+    }
+
+    return `/${normalizedPath}`;
   }
 }

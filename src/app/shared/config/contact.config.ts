@@ -1,6 +1,6 @@
 export const CONTACT = {
 
-  whatsapp: '916353799159',
+  whatsapp: '918128641593',
 
   email: 'Skygalaxyinfotech@gmail.com'
 

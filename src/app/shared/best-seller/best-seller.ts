@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BestSellerService } from '../../services/best-seller.service';
 import { CONTACT } from '../../shared/config/contact.config';
@@ -32,7 +32,8 @@ export class BestSeller implements OnInit {
   contact = CONTACT;
 
   constructor(
-    private service: BestSellerService
+    private service: BestSellerService,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -48,6 +49,8 @@ export class BestSeller implements OnInit {
 
         this.loading = false;
 
+        this.cdr.detectChanges();
+
       },
 
       error: () => {
@@ -56,6 +59,8 @@ export class BestSeller implements OnInit {
 
         this.errorMessage =
           'Unable to load products';
+
+        this.cdr.detectChanges();
 
       }
 
