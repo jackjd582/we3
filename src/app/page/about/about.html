@@ -69,40 +69,45 @@
 
     <div class="container">
 
-        <h2 class="center">
-            Meet Our Team
-        </h2>
+        <h2 class="center">Leadership Team</h2>
 
-        <div class="row">
+        <p class="section-subtitle">
+            Meet the passionate professionals behind We3 Car Care,
+            committed to delivering premium automotive care solutions.
+        </p>
 
-            <div class="col-lg-6" *ngFor="
-let item
-of founders">
+        <div class="row justify-content-center">
+
+            <div class="col-lg-5 col-md-6 mb-4"
+                *ngFor="let item of founders">
 
                 <div class="founder-card">
 
-                    <img [src]="
-getImageUrl(
-item.image
-)">
+                    <div class="founder-top">
 
-                    <h3>
+                        <img
+                            [src]="getImageUrl(item.image)"
+                            [alt]="item.name">
 
-                        {{item.name}}
+                    </div>
 
-                    </h3>
+                    <div class="founder-body">
 
-                    <h6>
+                        <h3>{{item.name}}</h3>
 
-                        {{item.role}}
+                        <span class="designation">
 
-                    </h6>
+                            {{item.role}}
 
-                    <p>
+                        </span>
 
-                        {{item.desc}}
+                        <p>
 
-                    </p>
+                            {{item.desc}}
+
+                        </p>
+
+                    </div>
 
                 </div>
 
