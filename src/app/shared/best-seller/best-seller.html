@@ -14,53 +14,54 @@
       {{ errorMessage }}
     </div>
 
-    <div class="row" *ngIf="!loading && products.length">
+    <div class="slider-wrapper" *ngIf="!loading && products.length">
+      <button class="slider-arrow" type="button" (click)="scrollSlider(-1)">
+        <i class="bi bi-chevron-left"></i>
+      </button>
 
-      <div
-        class="col-lg-3"
-        *ngFor="let item of products | slice:0:4"
-      >
+      <div class="slider-track" #sliderTrack>
+        <div class="slider-item" *ngFor="let item of products">
+          <div class="product">
+            <span class="best-seller-badge">Best Seller</span>
 
-        <div class="product">
+            <img
+              [src]="item.image"
+              [alt]="item.title"
+            >
 
-          <img
-            [src]="item.image"
-            [alt]="item.title"
-          >
+            <h5>
+              {{ item.title }}
+            </h5>
 
-          <h5>
-            {{ item.title }}
-          </h5>
+            <div class="review">
+              ★★★★★
+              <span>
+                ({{ item.reviews }})
+              </span>
+            </div>
 
-          <div class="review">
-            ★★★★★
-            <span>
-              ({{ item.reviews }})
-            </span>
+            <div class="price">
+              {{ item.price }}
+            </div>
+
+            <div class="contact-icons">
+              <i
+                class="bi bi-whatsapp"
+                (click)="openWhatsapp()"
+              ></i>
+
+              <i
+                class="bi bi-envelope-fill"
+                (click)="openEmail()"
+              ></i>
+            </div>
           </div>
-
-          <div class="price">
-            {{ item.price }}
-          </div>
-
-          <div class="contact-icons">
-
-            <i
-              class="bi bi-whatsapp"
-              (click)="openWhatsapp()"
-            ></i>
-
-            <i
-              class="bi bi-envelope-fill"
-              (click)="openEmail()"
-            ></i>
-
-          </div>
-
         </div>
-
       </div>
 
+      <button class="slider-arrow" type="button" (click)="scrollSlider(1)">
+        <i class="bi bi-chevron-right"></i>
+      </button>
     </div>
 
   </div>

@@ -69,6 +69,11 @@ selectImage(i)">
 
     <!-- Product Info -->
     <div class="product-info-section">
+      <div class="product-hero-badges">
+        <span class="product-badge product-badge-professional">Professional</span>
+        <span class="product-badge">Made in India</span>
+      </div>
+
       <h1 class="product-title">{{ product.title }}</h1>
 
       <p class="product-category-badge">{{ product.category }}</p>
@@ -90,19 +95,33 @@ selectImage(i)">
         </span>
       </div>
 
-      <!-- Price Section -->
-      <div class="price-section">
-        <div class="price-tag">
-          <span class="price-label">Price:</span>
-          <span class="price-value">{{ product.price }}</span>
-        </div>
-      </div>
+   
 
       <!-- Description -->
       <div class="description-section">
         <h3 class="description-title">Product Description</h3>
+        <div class="description-highlights">
+          <span>✨ High Gloss</span>
+          <span>🛡️ Paint Safe</span>
+          <span>💧 pH Balanced</span>
+          <span>🚗 Manual Wash</span>
+        </div>
         <p class="description-text">{{ product.description }}</p>
       </div>
+
+      <div *ngIf="product?.badges?.length; else fallbackBadges" class="detail-badges-section">
+        <span class="detail-badge" *ngFor="let badge of product.badges">{{ badge }}</span>
+      </div>
+      <ng-template #fallbackBadges>
+        <div class="detail-badges-section">
+          <span class="detail-badge">9H Ceramic Coating</span>
+          <span class="detail-badge">10H Ceramic Coating</span>
+          <span class="detail-badge">Graphene Ceramic Coating</span>
+          <span class="detail-badge">Premium Car Wax Glaze</span>
+        </div>
+      </ng-template>
+
+     
 
       <!-- Product Details -->
       <div class="details-section">

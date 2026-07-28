@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BestSellerService } from '../../services/best-seller.service';
 import { CONTACT } from '../../shared/config/contact.config';
@@ -22,6 +22,8 @@ interface Product {
   styleUrls: ['./best-seller.css']
 })
 export class BestSeller implements OnInit {
+
+  @ViewChild('sliderTrack') sliderTrack!: ElementRef<HTMLElement>;
 
   products: Product[] = [];
 
@@ -66,6 +68,17 @@ export class BestSeller implements OnInit {
 
     });
 
+  }
+
+  scrollSlider(direction: number) {
+    const track = this.sliderTrack?.nativeElement;
+
+    if (!track) {
+      return;
+    }
+
+    const cardWidth = track.querySelector('.slider-item')?.getBoundingClientRect().width || 280;
+    track.scrollBy({ left: direction * (cardWidth + 16), behavior: 'smooth' });
   }
 
   openWhatsapp() {
