@@ -83,10 +83,7 @@ export class ProductDetail implements OnInit {
       `Hello,
 I want details for
 
-${this.product.title}
-
-Price:
-${this.product.price}`;
+${this.product.title}`;
 
     window.open(
 
@@ -103,8 +100,7 @@ ${this.product.price}`;
   }
 
   copyWhatsAppNumber() {
-    const phone = this.product.whatsapp;
-    navigator.clipboard.writeText(phone).then(() => {
+    navigator.clipboard.writeText(CONTACT.whatsapp).then(() => {
       alert('WhatsApp number copied to clipboard!');
     });
   }

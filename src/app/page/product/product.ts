@@ -153,9 +153,6 @@ ${product.title}
 Category:
 ${product.category}
 
-Price:
-${product.price}
-
 Please provide details.`;
 
     window.open(

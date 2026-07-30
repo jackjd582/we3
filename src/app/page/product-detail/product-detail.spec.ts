@@ -4,6 +4,7 @@ import { of } from 'rxjs';
 
 import { ProductDetail } from './product-detail';
 import { ProductService } from '../../services/product.service';
+import { CONTACT } from '../../shared/config/contact.config';
 
 describe('ProductDetail', () => {
   let component: ProductDetail;
@@ -63,5 +64,17 @@ describe('ProductDetail', () => {
     };
 
     expect(component.getProductImage(product)).toBe('assets/images/products/related-1.jpeg');
+  });
+
+  it('should use the configured WhatsApp number and omit price from the message', () => {
+    component.product = { title: 'Test Product', price: '₹100' };
+    const openSpy = spyOn(window, 'open');
+
+    component.openWhatsApp();
+
+    expect(CONTACT.whatsapp).toBe('6353799159');
+    const url = openSpy.calls.most().args[0] as string;
+    expect(url).toContain('https://wa.me/6353799159');
+    expect(url).not.toContain('Price:');
   });
 });
