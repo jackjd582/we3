@@ -155,14 +155,7 @@ ${product.category}
 
 Please provide details.`;
 
-    const numbers = CONTACT.getWhatsAppNumbers();
-
-    numbers.forEach((number) => {
-      window.open(
-        `https://wa.me/${number}?text=${encodeURIComponent(message)}`,
-        '_blank'
-      );
-    });
+    CONTACT.openWhatsApp(message);
 
   }
 
