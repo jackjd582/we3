@@ -3,7 +3,7 @@
     {
         "id": 1,
         "title": "All in one Dresser",
-        "category": "All In One Dresser",
+        "category": "Car Care Products",
         "description": "High-quality wax polish for a glossy shine and long-lasting protection against UV rays.",
         "rating": 4.9,
         "reviews": 312,
@@ -12,7 +12,7 @@
       {
         "id": 2,
         "title": "Tyre Dresser",
-        "category": "Tyre Dresser",
+        "category": "Car Care Products",
         "description": "Premium tyre shine that provides a dark, glossy finish and protects against cracking.",
         "rating": 4.8,
         "reviews": 510,
@@ -21,7 +21,7 @@
      {
         "id": 3,
         "title": "Foam Wash Shampoo",
-        "category": "Foam Wash Shampoo",
+        "category": "Car Care Products",
         "description": "Streak-free glass cleaner for windows, mirrors, and glass surfaces.",
         "rating": 4.6,
         "reviews": 198,
@@ -30,7 +30,7 @@
       {
         "id": 4,
         "title": "Degreaser For Engine,Bonnet & Alloy wheels",
-        "category": "Degreaser",
+        "category": "Car Care Products",
         "description": "Powerful interior cleaner for dashboard, seats, and upholstery without leaving residue.",
         "rating": 4.7,
         "reviews": 285,
@@ -40,7 +40,7 @@
     {
         "id": 5,
         "title": "Fiber Plastic Restorer",
-        "category": "Fiber Plastic Restorer",
+        "category": "Car Care Products",
         "description": "Advanced ceramic wax coating that provides 6-month protection and hydrophobic properties.",
         "rating": 4.9,
         "reviews": 534,

@@ -83,10 +83,12 @@ export class BestSeller implements OnInit {
 
   openWhatsapp() {
 
-    window.open(
-      `https://wa.me/${this.contact.whatsapp}`,
-      '_blank'
-    );
+    this.contact.getWhatsAppNumbers().forEach((number: string) => {
+      window.open(
+        `https://wa.me/${number}`,
+        '_blank'
+      );
+    });
 
   }
 

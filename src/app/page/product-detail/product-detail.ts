@@ -85,23 +85,22 @@ I want details for
 
 ${this.product.title}`;
 
-    window.open(
+    const numbers = CONTACT.getWhatsAppNumbers();
 
-      `https://wa.me/${CONTACT.whatsapp
-      }?text=${encodeURIComponent(
-        message
-      )
-      }`,
-
-      '_blank'
-
-    );
+    numbers.forEach((number) => {
+      window.open(
+        `https://wa.me/${number}?text=${encodeURIComponent(message)}`,
+        '_blank'
+      );
+    });
 
   }
 
   copyWhatsAppNumber() {
-    navigator.clipboard.writeText(CONTACT.whatsapp).then(() => {
-      alert('WhatsApp number copied to clipboard!');
+    const numbers = CONTACT.getWhatsAppNumbers();
+
+    navigator.clipboard.writeText(numbers.join(', ')).then(() => {
+      alert('WhatsApp numbers copied to clipboard!');
     });
   }
 

@@ -155,17 +155,14 @@ ${product.category}
 
 Please provide details.`;
 
-    window.open(
+    const numbers = CONTACT.getWhatsAppNumbers();
 
-      `https://wa.me/${CONTACT.whatsapp
-      }?text=${encodeURIComponent(
-        message
-      )
-      }`,
-
-      '_blank'
-
-    );
+    numbers.forEach((number) => {
+      window.open(
+        `https://wa.me/${number}?text=${encodeURIComponent(message)}`,
+        '_blank'
+      );
+    });
 
   }
 

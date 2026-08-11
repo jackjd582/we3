@@ -66,15 +66,19 @@ describe('ProductDetail', () => {
     expect(component.getProductImage(product)).toBe('assets/images/products/related-1.jpeg');
   });
 
-  it('should use the configured WhatsApp number and omit price from the message', () => {
+  it('should open WhatsApp inquiries for all configured numbers and omit price from the message', () => {
     component.product = { title: 'Test Product', price: '₹100' };
     const openSpy = spyOn(window, 'open');
+    const numbers = CONTACT.getWhatsAppNumbers();
 
     component.openWhatsApp();
 
-    expect(CONTACT.whatsapp).toBe('6353799159');
-    const url = openSpy.calls.most().args[0] as string;
-    expect(url).toContain('https://wa.me/6353799159');
-    expect(url).not.toContain('Price:');
+    const urls = openSpy.calls.allArgs().map((call) => call[0] as string);
+
+    expect(numbers.length).toBeGreaterThan(1);
+    expect(urls.length).toBe(numbers.length);
+    expect(urls[0]).toContain(`https://wa.me/${numbers[0]}`);
+    expect(urls.some((url) => url.includes(`https://wa.me/${numbers[1]}`))).toBeTrue();
+    expect(urls[0]).not.toContain('Price:');
   });
 });
