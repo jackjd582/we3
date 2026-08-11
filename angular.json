@@ -38,7 +38,11 @@
             "server": "src/main.server.ts",
             "outputMode": "server",
             "security": {
-              "allowedHosts": []
+              "allowedHosts": [
+                "we3carcareproducts.com",
+                "www.we3carcareproducts.com",
+                "darling-salmiakki-6def79.netlify.app"
+              ]
             },
             "ssr": {
               "entry": "src/server.ts"
