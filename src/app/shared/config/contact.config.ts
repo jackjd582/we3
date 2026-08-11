@@ -16,7 +16,14 @@ export const CONTACT = {
   },
 
   getWhatsAppUrl(number: string, message: string): string {
-    return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+    const encodedMessage = encodeURIComponent(message);
+    const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      return `whatsapp://send?phone=${number}&text=${encodedMessage}`;
+    }
+
+    return `https://wa.me/send?phone=${number}&text=${encodedMessage}`;
   },
 
   openWhatsApp(message: string, targetWindow: Window = window): void {
