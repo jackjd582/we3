@@ -50,6 +50,14 @@ export const routes: Routes = [
                         .then(m => m.Contact)
 
             },
+            {
+                path: 'privacy-policy',
+
+                loadComponent: () =>
+                    import('./page/privacy-policy/privacy-policy')
+                        .then(m => m.PrivacyPolicy)
+
+            },
 
         ]
 
